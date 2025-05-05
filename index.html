@@ -2,161 +2,263 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arun Mishra - Resume</title>
   <style>
+    :root {
+      --primary: #1e3a8a;
+      --background: #f9fafb;
+      --section-bg: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --divider: #d1d5db;
+      --badge-bg: #1e40af;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: var(--background);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 880px;
       margin: 40px auto;
-      max-width: 900px;
-      line-height: 1.6;
-      background: #f8f9fa;
-      color: #333;
+      padding: 30px;
+      background: var(--section-bg);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      border-radius: 12px;
+      position: relative;
     }
-    h1, h2, h3 {
-      color: #2c3e50;
-    }
+
     h1 {
-      font-size: 2em;
-      margin-bottom: 0;
+      margin: 0;
+      font-size: 2.2em;
+      color: var(--primary);
     }
+
     h2 {
-      margin-top: 2em;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
+      margin-top: 40px;
+      font-size: 1.4em;
+      color: var(--primary);
     }
-    a {
-      color: #2980b9;
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--divider);
+      margin: 30px 0;
+    }
+
+    .contact {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.95em;
+    }
+
+    .contact a {
+      color: var(--primary);
       text-decoration: none;
     }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
     .section {
-      margin-bottom: 2em;
+      margin-bottom: 30px;
     }
+
     .job-title {
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 1.05em;
     }
+
     .job-details {
       font-style: italic;
-      color: #555;
+      color: var(--muted);
+      margin-bottom: 10px;
     }
+
     ul {
       padding-left: 20px;
+      line-height: 1.6;
     }
-    .skills, .languages {
+
+    .badges {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      margin-top: 10px;
     }
-    .skill-item, .lang-item {
-      background: #e9ecef;
-      padding: 5px 10px;
-      border-radius: 4px;
+
+    .badge {
+      background-color: var(--badge-bg);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.85em;
+    }
+
+    .profile-photo {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+      border: 3px solid #ffffff;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        margin: 10px;
+        padding: 20px;
+      }
+
+      .profile-photo {
+        position: static;
+        display: block;
+        margin: 0 auto 20px auto;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="profile-photo">
+      <img src="https://media.licdn.com/dms/image/v2/C4E03AQHDC692MYhszw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1609751465133?e=1752105600&v=beta&t=JxqrrLF9yDWCrvePY06IEtNyYlauEFEdkmoBVBfqfOA" alt="Profile Photo">
+    </div>
 
-  <h1>Arun Mishra</h1>
-  <p><strong>Senior Software Engineer</strong></p>
-  <p>
-    <a href="mailto:arunmisra756@gmail.com">arunmisra756@gmail.com</a> |
-    +66-0855812521 |
-    Bangkok, Thailand |
-    <a href="https://www.linkedin.com/in/arun-kumar-mishra-089340a0">LinkedIn</a> |
-    <a href="https://github.com/arunkmishra">GitHub</a>
-  </p>
+    <h1>Arun Mishra</h1>
+    <p><strong>Senior Software Engineer</strong></p>
+    <div class="contact">
+      <p>
+        <a href="mailto:arunmisra756@gmail.com">arunmisra756@gmail.com</a> |
+        +66-0855812521 |
+        Bangkok, Thailand |
+        <a href="https://www.linkedin.com/in/arun-kumar-mishra-089340a0">LinkedIn</a> |
+        <a href="https://github.com/arunkmishra">GitHub</a>
+      </p>
+    </div>
 
-  <div class="section">
-    <h2>Profile</h2>
-    <p>
-      Accomplished Software Engineer with 7+ years of experience. Expertise in backend systems and data engineering,
-      with a passion for enhancing performance through innovative solutions. Committed to learning, driving innovation,
-      and delivering robust, scalable solutions to complex challenges.
-    </p>
-  </div>
+    <hr />
 
-  <div class="section">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill-item">Scala</div>
-      <div class="skill-item">SQL</div>
-      <div class="skill-item">SBT</div>
-      <div class="skill-item">Apache Spark</div>
-      <div class="skill-item">Akka</div>
-      <div class="skill-item">Git</div>
-      <div class="skill-item">Couchbase</div>
-      <div class="skill-item">ElasticSearch</div>
-      <div class="skill-item">Kafka</div>
-      <div class="skill-item">Protobufs</div>
-      <div class="skill-item">Docker</div>
-      <div class="skill-item">Kubernetes</div>
-      <div class="skill-item">Gitlab CI</div>
-      <div class="skill-item">Grafana</div>
-      <div class="skill-item">Kibana</div>
-      <div class="skill-item">Scrum</div>
-      <div class="skill-item">HTML</div>
-      <div class="skill-item">CSS</div>
+    <div class="section">
+      <h2>Profile</h2>
+      <p>
+        Accomplished Software Engineer with 7+ years of experience in backend systems and data engineering.
+        Passionate about improving performance and developing scalable solutions that meet real-world needs.
+      </p>
+    </div>
+
+    <hr />
+
+    <div class="section">
+      <h2>Skills</h2>
+      <div class="badges">
+        <span class="badge">Scala</span>
+        <span class="badge">SQL</span>
+        <span class="badge">Spark</span>
+        <span class="badge">Akka</span>
+        <span class="badge">Docker</span>
+        <span class="badge">Kubernetes</span>
+        <span class="badge">Kafka</span>
+        <span class="badge">ElasticSearch</span>
+        <span class="badge">Couchbase</span>
+        <span class="badge">GitLab CI</span>
+        <span class="badge">Grafana</span>
+        <span class="badge">Kibana</span>
+        <span class="badge">Protobufs</span>
+        <span class="badge">HTML/CSS</span>
+        <span class="badge">SBT</span>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="section">
+      <h2>Languages</h2>
+      <div class="badges">
+        <span class="badge">English - Full Professional</span>
+        <span class="badge">Hindi - Native</span>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="section">
+      <h2>Work Experience</h2>
+
+      <div>
+        <p class="job-title">Senior Software Engineer – Agoda</p>
+        <p class="job-details">Bangkok, Thailand | May 2022 – Present</p>
+        <ul>
+          <li>Owned property content systems fetching hotel data.</li>
+          <li>Optimized Spark job: reduced processing time from 16 to 5 hours.</li>
+          <li>Handled 5K RPS with &lt;20ms P99 latency.</li>
+          <li>Led migration to Kubernetes; automated deployments with GitLab CI.</li>
+          <li>Created monitoring dashboards using Grafana.</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="job-title">Software Engineer – Leonteq Securities AG</p>
+        <p class="job-details">Remote | Jan 2021 – Apr 2022</p>
+        <ul>
+          <li>Managed 4/18 critical OTC Backoffice services.</li>
+          <li>Built CSV validator and PDF reporting tools.</li>
+          <li>Created Java Swing GUI with Protobuf support for internal ops.</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="job-title">Senior Analyst – Deutsche Bank</p>
+        <p class="job-details">Pune, India | Jun 2019 – Dec 2020</p>
+        <ul>
+          <li>Built Spark pipelines from Oracle to Hive for risk analytics.</li>
+          <li>Optimized data jobs by 75% execution time reduction.</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="job-title">Graduate Analyst – Barclays Bank</p>
+        <p class="job-details">Pune, India | Jul 2017 – May 2019</p>
+        <ul>
+          <li>Built user onboarding workflows for multiple platforms.</li>
+          <li>Created rule engine to enhance system scalability.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="section">
+      <h2>Education</h2>
+      <p><strong>B.E. in Information Technology</strong><br />
+      Army Institute of Technology, 2013 – 2017</p>
+    </div>
+
+    <hr />
+
+    <div class="section">
+      <h2>Certificates</h2>
+      <ul>
+        <li>
+          <a href="https://www.coursera.org/account/accomplishments/certificate/3PDWE45DGUJC" target="_blank">
+            Functional Programming Principles in Scala – Coursera (2022)
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
-
-  <div class="section">
-    <h2>Languages</h2>
-    <div class="languages">
-      <div class="lang-item">English - Full Professional Proficiency</div>
-      <div class="lang-item">Hindi - Native or Bilingual Proficiency</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Work Experience</h2>
-
-    <p class="job-title">Senior Software Engineer – Agoda (05/2022 – Present)</p>
-    <p class="job-details">Bangkok, Thailand</p>
-    <ul>
-      <li>Worked on property content, responsible for fetching hotel data.</li>
-      <li>Optimized Spark job, reducing processing time from 16 to 5 hours.</li>
-      <li>Maintained high-load system serving 5K RPS with 20ms P99 response time.</li>
-      <li>Migrated apps to Kubernetes and automated processes with GitLab CI.</li>
-      <li>Created dashboards using Grafana.</li>
-    </ul>
-
-    <p class="job-title">Software Engineer – Leonteq Securities AG (01/2021 – 04/2022)</p>
-    <p class="job-details">Remote (Lisbon, Portugal)</p>
-    <ul>
-      <li>Managed 4 out of 18 services for OTC Backoffice Systems.</li>
-      <li>Built trade contract validation tools using CSV + PDF reports.</li>
-      <li>Developed a GUI for trade processing using Java Swing and Protobufs.</li>
-    </ul>
-
-    <p class="job-title">Senior Analyst – Deutsche Bank (06/2019 – 12/2020)</p>
-    <p class="job-details">Pune, India</p>
-    <ul>
-      <li>Built data pipelines from Oracle to Hive for analytical use.</li>
-      <li>Reduced Spark job execution time from 4 to 1 hour.</li>
-    </ul>
-
-    <p class="job-title">Graduate Analyst – Barclays Bank (07/2017 – 05/2019)</p>
-    <p class="job-details">Pune, India</p>
-    <ul>
-      <li>Developed user onboarding solutions across multiple channels.</li>
-      <li>Designed a rules management system to improve scalability.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Education</h2>
-    <p><strong>B.E. in Information Technology</strong><br />
-    Army Institute of Technology (2013 – 2017)</p>
-  </div>
-
-  <div class="section">
-    <h2>Certificates</h2>
-    <ul>
-      <li><a href="https://www.coursera.org/account/accomplishments/certificate/3PDWE45DGUJC">
-        Functional Programming Principles in Scala (Coursera)</a> – Oct 2022
-      </li>
-    </ul>
-  </div>
-
 </body>
 </html>
